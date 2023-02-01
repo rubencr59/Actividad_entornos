@@ -23,12 +23,12 @@ class Carta(Minumero: Int, mipalo: Char) {
         get() {
             return field
         }
-/*
-    init {
-        this.numero = numero
-        this.palo = palo
-    }
-*/
+    /*
+        init {
+            this.numero = numero
+            this.palo = palo
+        }
+    */
 
     constructor(otraCarta: Carta) : this(otraCarta.numero, otraCarta.palo) {
     }
@@ -74,13 +74,13 @@ class Carta(Minumero: Int, mipalo: Char) {
     }
 }
 fun paloAleatorio():Char{
-    val l = listOf<Char>('C', 'P', 'R', 'T')
+    val l = listOf<Char>('O', 'C', 'B', 'E')
     return(l.get((0..3).random()) )
 }
 fun numeroAPalo(n:Int):Char{
-    val l = listOf<Char>('C', 'P', 'R', 'T')
+    val l = listOf<Char>('O', 'C', 'B', 'E')
     if (n>=0 && n<=3)
-     return(l.get(n) )
+        return(l.get(n) )
     else return l.get(0)
 }
 fun main(args: Array<String>) {

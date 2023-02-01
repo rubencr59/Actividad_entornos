@@ -14,10 +14,10 @@ fun main(args: Array<String>) {
     println("¿Que carta quieres modificar?")
     posicion = readln().toInt()
     println("¿Por cual?(Introduce primero el número)")
-    println("numero == 1 -> As\n numero de 2 a 10 -> número normal\n numero == 11 -> Jack\n numero == 12 -> Reina\n numero == 13 -> Rey")
+    println("numero == 1 -> As\n numero de 2 a 10 -> número normal\n numero == 11 -> Sota\n numero == 12 -> Caballo\n numero == 13 -> Rey")
     val Numero = readln().toInt()
     println("Ahora el palo:")
-    println("palo == C -> Corazones\n palo == P -> Picas\n palo == R -> Rombos\n  palo == T -> Trebol")
+    println("palo == O -> Oros\n palo == C -> Copas\n palo == B -> Bastos\n  palo == E -> Espadas")
     val Palo = readln()!![0]
     val nuevacarta = Carta(Numero,Palo)
     Cartas3.actualizarCarta(posicion,nuevacarta )

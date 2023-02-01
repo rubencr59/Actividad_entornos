@@ -20,6 +20,6 @@ class Baraja {
         for (cartadelaLista in listaCartas){
             cartadelaLista.mostrarCarta()
         }
-        print("fin mostrar baraja")
+        print("Fin mostrar baraja")
     }
 }

@@ -14,7 +14,7 @@ class Carta(Minumero: Int, mipalo: Char) {
     var palo=mipalo
         set(value) {
             //'C','P', 'R', 'T'
-            val l = listOf<Char>('C', 'P', 'R', 'T')
+            val l = listOf<Char>('O', 'C', 'B', 'E')
             if (value !in l) {
                 println("Palo de carta inválido.")
             } else
@@ -37,16 +37,16 @@ class Carta(Minumero: Int, mipalo: Char) {
         var paloMostrar = ""
         var numeroMostrar = ""
         when {
-            palo == 'C' -> paloMostrar = "Corazones"
-            palo == 'P' -> paloMostrar = "Picas"
-            palo == 'R' -> paloMostrar = "Rombos"
-            palo == 'T' -> paloMostrar = "Trebol"
+            palo == 'O' -> paloMostrar = "Oros"
+            palo == 'C' -> paloMostrar = "Copas"
+            palo == 'B' -> paloMostrar = "Bastos"
+            palo == 'E' -> paloMostrar = "Espadas"
         }
         when {
             numero == 1 -> numeroMostrar = "As"
             numero in (2..10) -> numeroMostrar = numero.toString()
-            numero == 11 -> numeroMostrar = "Jack"
-            numero == 12 -> numeroMostrar = "Reina"
+            numero == 11 -> numeroMostrar = "Sota"
+            numero == 12 -> numeroMostrar = "Caballo"
             numero == 13 -> numeroMostrar = "Rey"
         }
         println("$numeroMostrar de $paloMostrar.")

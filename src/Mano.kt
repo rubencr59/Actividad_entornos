@@ -14,7 +14,7 @@ class Mano() {
         }
 
 
-    var Cartas = arrayListOf<Carta>()
+    var Cartasdemano = arrayListOf<Carta>()
 
 
     init {
@@ -22,13 +22,13 @@ class Mano() {
         for (i in 0..Tamaño - 1) {
             val n = (1..13).random()
             val p = (0..3).random()
-            Cartas.add(Carta(n, numeroAPalo(p)))
+            Cartasdemano.add(Carta(n, numeroAPalo(p)))
         }
     }
 
     fun mostrarcartas() {
         print("mostrar 3 cartas\n")
-        for (cartadelaLista in Cartas) {
+        for (cartadelaLista in Cartasdemano) {
             cartadelaLista.mostrarCarta()
         }
         print("fin mostrar 3 cartas")
@@ -36,25 +36,25 @@ class Mano() {
     }
 
     fun obtenerTamaño() {
-        println(Cartas.size)
+        println(Cartasdemano.size)
     }
 
     fun mostrarCarta(Posicion: Int) {
 
-        Cartas[Posicion].mostrarCarta()
+        Cartasdemano[Posicion].mostrarCarta()
 
 
     }
 
     fun actualizarCarta(Posicion: Int, Carta: Carta) {
-        if (Posicion >= 0 && Posicion < Cartas.size) {
-            Cartas[Posicion-1] = Carta  //Cambiar una carta por la carta asignada.
+        if (Posicion >= 0 && Posicion < Cartasdemano.size) {
+            Cartasdemano[Posicion-1] = Carta  //Cambiar una carta por la carta asignada.
         }
     }
     fun manoGanadora (Otramano: Mano) {
         var acumulaVictorias= 0
-        for (i in (0..Cartas.size-1)){
-            acumulaVictorias += Cartas[i].compararCarta(Otramano.Cartas[i])
+        for (i in (0..Cartasdemano.size-1)){
+            acumulaVictorias += Cartasdemano[i].compararCarta(Otramano.Cartasdemano[i])
 
         if (acumulaVictorias<0){
             this.mostrarcartas()

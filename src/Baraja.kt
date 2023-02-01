@@ -16,7 +16,7 @@ class Baraja {
 
     }
     fun mostrar(){
-        print("mostrar baraja")
+        print("Se va a mostrar la baraja española: ")
         for (cartadelaLista in listaCartas){
             cartadelaLista.mostrarCarta()
         }
